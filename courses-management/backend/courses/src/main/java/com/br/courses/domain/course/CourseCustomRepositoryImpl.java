@@ -14,10 +14,8 @@ class CourseCustomRepositoryImpl implements CourseCustomRepository {
     @Override
     public List<Course> findAllCourses() {
         QCourse qCourse = QCourse.course;
+        JPAQuery<Course> query = new JPAQuery<>(manager).select(qCourse).from(qCourse);
 
-        return new JPAQuery<>(manager)
-                .select(qCourse)
-                .from(qCourse)
-                .fetch();
+        return query.fetch();
     }
 }
