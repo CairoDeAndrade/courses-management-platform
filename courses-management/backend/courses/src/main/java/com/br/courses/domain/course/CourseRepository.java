@@ -1,4 +1,4 @@
-package com.br.courses.course;
+package com.br.courses.domain.course;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

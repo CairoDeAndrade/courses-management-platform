@@ -1,20 +1,16 @@
-package com.br.courses.course;
+package com.br.courses.domain.course;
 
+import com.br.courses.domain.common.RepositoryBaseImpl;
 import com.querydsl.jpa.impl.JPAQuery;
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.PersistenceContext;
 
 import java.util.List;
 
-class CourseCustomRepositoryImpl implements CourseCustomRepository {
-
-    @PersistenceContext
-    private EntityManager manager;
+class CourseCustomRepositoryImpl extends RepositoryBaseImpl implements CourseCustomRepository {
 
     @Override
     public List<Course> findAllCourses() {
         QCourse qCourse = QCourse.course;
-        JPAQuery<Course> query = new JPAQuery<>(manager).select(qCourse).from(qCourse);
+        JPAQuery<Course> query = select(qCourse).from(qCourse);
 
         return query.fetch();
     }

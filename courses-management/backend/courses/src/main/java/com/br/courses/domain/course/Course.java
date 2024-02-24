@@ -1,4 +1,4 @@
-package com.br.courses.course;
+package com.br.courses.domain.course;
 
 import jakarta.persistence.*;
 import lombok.Data;

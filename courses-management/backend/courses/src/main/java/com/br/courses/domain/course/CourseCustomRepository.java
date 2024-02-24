@@ -1,4 +1,4 @@
-package com.br.courses.course;
+package com.br.courses.domain.course;
 
 import java.util.List;
 

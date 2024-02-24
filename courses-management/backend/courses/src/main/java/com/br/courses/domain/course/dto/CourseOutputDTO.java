@@ -1,6 +1,6 @@
-package com.br.courses.course.dto;
+package com.br.courses.domain.course.dto;
 
-import com.br.courses.course.Course;
+import com.br.courses.domain.course.Course;
 
 import java.util.UUID;
 
